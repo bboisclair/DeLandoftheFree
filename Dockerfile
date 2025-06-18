@@ -10,9 +10,11 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/bboisclair/DeLandoftheFree/ .
+RUN git clone https://github.com/MarkMCFC/tfms.xyz .
 
 RUN pip install flask curl-cffi m3u8 gunicorn
+
+ENV PYTHONPATH=/app
 
 EXPOSE 7860
 
